@@ -8,6 +8,9 @@ module.exports = (grunt) ->
       all:
         files: ['coffee/**/*.coffee', 'less/**/*.less']
         tasks: ['coffeeify', 'less']
+        options:
+          livereload: yes
+
 
     less:
       site:
