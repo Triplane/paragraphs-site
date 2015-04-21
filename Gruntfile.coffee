@@ -11,7 +11,6 @@ module.exports = (grunt) ->
         options:
           livereload: yes
 
-
     less:
       site:
         files:
