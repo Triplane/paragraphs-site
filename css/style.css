@@ -220,6 +220,12 @@ footer a {
 .no-padding-bottom {
   padding-bottom: 0;
 }
+.line {
+  display: inline;
+  border-right: 7px solid #ed6f72;
+  height: 100%;
+  padding-left: 4px;
+}
 .cf:before,
 .cf:after {
   content: " ";
