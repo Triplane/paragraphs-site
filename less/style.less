@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	width: 100%;
-	font-family: "Lato", Helvetica, sans-serif;
+	font-family: 'Lato', Helvetica, sans-serif;
 	line-height: 1;
 	color: @gray;
 }
@@ -42,6 +42,7 @@ a {
 
 	&:hover {
 		text-decoration: underline;
+		cursor: auto;
 	}
 }
 
@@ -124,6 +125,7 @@ section {
 	h2 {
 		font-size: 17px;
 		margin-bottom: 80px;
+		line-height: 25px;
 	}
 
 	&:after {
@@ -172,6 +174,7 @@ section {
 			background-size: 970px 411px;
 			background-repeat: no-repeat;
 			background-position: -100px 0;
+			margin-bottom: 0;
 		}
 
 		.image-container {
@@ -219,6 +222,39 @@ section {
 	}
 }
 
+footer {
+	margin-top: 80px;
+	border-top: 1px solid @lightGray;
+	font-size: 10px;
+	padding: 20px;
+	color: gray;
+
+	a {
+		color: gray;
+		float: right;
+		padding-left: 15px;
+	}
+}
+
+.badge {
+	width: 244px;
+	height: 71px;
+	margin: 0 auto;
+	display: block;
+	text-indent: -9999px;
+	background-image: url('../img/app-store-badge.png');
+	background-size: 244px 71px;
+	background-repeat: no-repeat;
+}
+
+.margin-top {
+	margin-top: -40px;
+	margin-bottom: 60px;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0;
+}
 
 .cf:before,
 .cf:after {
@@ -226,10 +262,91 @@ section {
     display: table;
 }
 
-.cf:after {
-    clear: both;
+@media screen and (max-width: 899px) {
+
+	#centerpiece h1 {
+		font-size: 65px;
+	}
+
+	header {
+		h1.branding {
+			width: 100%;
+			float: none;
+			background-position: center;
+		}
+		aside {
+			display: none;
+		}
+	}
+
+	.features {
+
+		figure {
+			position: relative;
+			height: auto;
+			margin-bottom: 40px;
+
+			.image-container {
+				margin: 0 auto;
+				background-position: center 0;
+				left: auto !important;
+				right: auto !important;
+				position: relative;
+			}
+			&.flower-bg {
+				background-image: none;
+			}
+		}
+
+		aside {
+			position: relative;
+			top: auto;
+			left: auto !important;
+			right: auto !important;
+			-webkit-transform: none;
+			margin-top: 25px;
+			margin-bottom: 25px;
+			text-align: center;
+			width: auto;
+		}
+	}
+
 }
 
-.cf {
-    *zoom: 1;
+@media screen and (max-width: 593px) {
+	#centerpiece {
+		h1 {
+			font-size: 50px;
+		}
+	}
+
+	.features {
+
+		figure {
+
+			.image-container {
+				width: 100%;
+				height: 200px;
+				background-size: 270px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.features figure.flower-bg {
+		background-position: -200px 0;
+	}
+}
+
+@media screen and (min-width: 1044px) {
+	.features figure.flower-bg {
+		background-position: -150px 0;
+	}
+}
+
+@media screen and (min-width: 1230px) {
+	.features figure.flower-bg {
+		background-position: 0;
+	}
 }
