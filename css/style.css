@@ -336,3 +336,20 @@ footer a {
     background-position: 0;
   }
 }
+.features,
+header,
+h2,
+#centerpiece,
+#centerpiece::after {
+  -webkit-transition: opacity 1s ease-in-out, border-color 1s ease-in-out;
+  transition: opacity 1s ease-in-out, border-color 1s ease-in-out;
+}
+#outer-wrapper.hide .features,
+#outer-wrapper.hide header,
+#outer-wrapper.hide h2,
+#outer-wrapper.hide #centerpiece::after {
+  opacity: 0;
+}
+#outer-wrapper.hide #centerpiece {
+  border-bottom: 1px solid transparent;
+}

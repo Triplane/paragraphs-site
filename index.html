@@ -15,9 +15,19 @@
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<noscript>
+            <style>#outer-wrapper.hide .features,
+			#outer-wrapper.hide header,
+			#outer-wrapper.hide h2,
+			#outer-wrapper.hide #centerpiece::after {
+			  opacity: 1;
+			} #outer-wrapper.hide #centerpiece {
+			  border-bottom: 1px solid #e4e5e6;
+			}</style>
+    </noscript>
 </head>
 <body>
-	<div id="outer-wrapper">
+	<div id="outer-wrapper" class="hide">
 		<div class="wrapper">
 			<header class="cf">
 				<h1 class="branding">Paragraphs</h1>
@@ -26,7 +36,7 @@
 				</aside>
 			</header>
 			<section id="centerpiece">
-				<h1>Just Write.<span class="line"></span></h1>
+				<h1><span id="slogan">Just Write.</span><span class="line"></span></h1>
 				<h2>Minimalist writing for Mac. <a href="#learn">Learn more</a> or <a href="https://itunes.apple.com/us/app/paragraphs-minimalist-writing/id990885356?ls=1&mt=12">buy now.</a></h2>
 			</section>
 			<a name="learn"></a>

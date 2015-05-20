@@ -1,5 +1,5 @@
 module.exports = (grunt) ->
-  grunt.loadNpmTasks 'grunt-coffeeify'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
@@ -7,7 +7,7 @@ module.exports = (grunt) ->
     watch:
       all:
         files: ['coffee/**/*.coffee', 'less/**/*.less']
-        tasks: ['coffeeify', 'less']
+        tasks: ['coffee', 'less']
         options:
           livereload: yes
 
@@ -16,9 +16,7 @@ module.exports = (grunt) ->
         files:
           'css/style.css' : 'less/style.less'
 
-    coffeeify:
+    coffee:
       site:
-        files: [
-          src: 'coffee/**/*.coffee'
-          dest: 'js/main.js'
-        ]
+        files:
+          'js/main.js' : 'coffee/**/*.coffee'

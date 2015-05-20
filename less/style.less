@@ -407,3 +407,18 @@ footer {
 		background-position: 0;
 	}
 }
+
+.features, header, h2, #centerpiece, #centerpiece::after {
+	-webkit-transition: opacity 1s ease-in-out, border-color 1s ease-in-out;
+	transition: opacity 1s ease-in-out, border-color 1s ease-in-out;
+}
+
+#outer-wrapper.hide {
+	.features, header, h2, #centerpiece::after {
+		opacity: 0;
+	}
+
+	#centerpiece {
+		border-bottom: 1px solid transparent;
+	}
+}
