@@ -1,7 +1,7 @@
 # main.coffee
 
-load = addEventListener 'load', ->
 
+load = addEventListener 'load', -
   removeEventListener('load', load)
   wrapper = document.getElementById 'outer-wrapper'
   slogan = document.getElementById 'slogan'
@@ -14,5 +14,10 @@ load = addEventListener 'load', ->
     else
       wrapper.className = 'show'
 
-  slogan.innerHTML = ''
-  type()
+  if document.cookie.indexOf('animation=played') is -1
+    slogan.innerHTML = ''
+    type()
+    document.cookie="animation=played"
+  else
+    slogan.innerHTML = 'Just Write.'
+    wrapper.className = 'show'
