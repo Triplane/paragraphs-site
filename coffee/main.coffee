@@ -1,7 +1,7 @@
 # main.coffee
 
 
-load = addEventListener 'load', -
+load = addEventListener 'load', ->
   removeEventListener('load', load)
   wrapper = document.getElementById 'outer-wrapper'
   slogan = document.getElementById 'slogan'
